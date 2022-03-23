@@ -1,0 +1,303 @@
+{
+	"info": {
+		"_postman_id": "4688ce30-d340-409e-a6b8-c01389ee1ea6",
+		"name": "OBShoppingCart",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Accounts",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"vunguyen2\",\r\n    \"password\":\"helloworld1232222\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5000/api/accounts/register",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"accounts",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"vunguyen2\",\r\n    \"password\":\"helloworld1232222\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5000/api/accounts/login",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"accounts",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Orders",
+			"item": [
+				{
+					"name": "Get All Orders",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJ2dW5ndXllbiIsIm5iZiI6MTY0ODAyNzMwNSwiZXhwIjoxNjQ4NjMyMTA1LCJpYXQiOjE2NDgwMjczMDV9.RzWy1Wn1PBUR2bcZyLB5qORgxIbAI8ISon5mln7kGQWyViBx0FkPtmAdogygcbFHt3yAGUevAXtijh_34X_JdQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:5000/api/orders",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"orders"
+							],
+							"query": [
+								{
+									"key": "full",
+									"value": "true",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Full Detail Order",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJ2dW5ndXllbiIsIm5iZiI6MTY0ODAyNzMwNSwiZXhwIjoxNjQ4NjMyMTA1LCJpYXQiOjE2NDgwMjczMDV9.RzWy1Wn1PBUR2bcZyLB5qORgxIbAI8ISon5mln7kGQWyViBx0FkPtmAdogygcbFHt3yAGUevAXtijh_34X_JdQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:5000/api/orders/6",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"orders",
+								"6"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Brief Detail Order",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJ2dW5ndXllbiIsIm5iZiI6MTY0ODAyNDcyNCwiZXhwIjoxNjQ4NjI5NTI0LCJpYXQiOjE2NDgwMjQ3MjR9.p5u296M54F_g74krUrdlc_QYhFKdMWbbTggwoT3VBFx2He5v0cQfHQIMYtKMhHoYJblUdixK81velBIPAmtd2w",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:5000/api/orders/short/3",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"orders",
+								"short",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Full Order",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"CustomerId\": \"89dd5b51-9b4e-4940-af79-ee7f759f2ae5\",\r\n        \"CustomerName\": \"VU LING Nguyen\",\r\n        \"CustomerEmail\": \"vnguyen@e.com\",\r\n        \"CustomerPhone\": \"1232837282\",\r\n        \"ShippingAddress\": \"NOWHERE, VN\",\r\n        \"Amount\": 12.99,\r\n        \"Status\": false,\r\n        \"OrderItems\": [\r\n            {\r\n                \"ProductId\": \"prod-18\",\r\n                \"ProductName\": \"Macbook Mouse\",\r\n                \"Price\": 12.99,\r\n                \"Quantity\": 1\r\n            },\r\n            {\r\n                \"ProductId\": \"prod-15\",\r\n                \"ProductName\": \"Acer Monitor\",\r\n                \"Price\": 15.00,\r\n                \"Quantity\": 1\r\n            },\r\n            {\r\n                \"ProductId\": \"prod-16\",\r\n                \"ProductName\": \"Webcam Logitech\",\r\n                \"Price\": 5.99,\r\n                \"Quantity\": 1\r\n            }\r\n        ]\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5000/api/orders/create",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"orders",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update an entire order",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJ2dW5ndXllbiIsIm5iZiI6MTY0ODAyNzMwNSwiZXhwIjoxNjQ4NjMyMTA1LCJpYXQiOjE2NDgwMjczMDV9.RzWy1Wn1PBUR2bcZyLB5qORgxIbAI8ISon5mln7kGQWyViBx0FkPtmAdogygcbFHt3yAGUevAXtijh_34X_JdQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"orderItems\": [\r\n        {\r\n            \"productId\": \"prod-15\",\r\n            \"productName\": \"Acer Monitor\",\r\n            \"price\": 15.00,\r\n            \"quantity\": 5\r\n        },\r\n        {\r\n            \"productId\": \"prod-16\",\r\n            \"productName\": \"Webcam Logitech\",\r\n            \"price\": 5.99,\r\n            \"quantity\": 1\r\n        },\r\n        {\r\n            \"productId\": \"prod-18\",\r\n            \"productName\": \"Macbook Mouse\",\r\n            \"price\": 12.99,\r\n            \"quantity\": 1\r\n        }\r\n    ],\r\n    \"customerId\": \"89dd5b51-9b4e-4940-af79-ee7f759f2ae5\",\r\n    \"customerName\": \"VU LING Nguyen\",\r\n    \"customerEmail\": \"vnguyen@e.com\",\r\n    \"customerPhone\": \"1232837282\",\r\n    \"shippingAddress\": \"NOWHERE, VN\",\r\n    \"amount\": 12.99,\r\n    \"status\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5000/api/orders/6",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"orders",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update order detail",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJ2dW5ndXllbiIsIm5iZiI6MTY0ODAyNTExMSwiZXhwIjoxNjQ4NjI5OTExLCJpYXQiOjE2NDgwMjUxMTF9.6U2sqFhQZQOCs60w5lykwics-zapvQQFYDY6_HRgWn6Ajdf4Xirc3Z3flquMD69p7l9KzUF_vsdt0hiVMNT8ew",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"value\": \"THIS IS A PATCH\",\r\n        \"path\": \"/customerName\",\r\n        \"op\": \"replace\"\r\n    },\r\n    {\r\n        \"path\": \"/orderItems/0\",\r\n        \"op\": \"remove\"\r\n    },\r\n    {\r\n        \"path\": \"/customerEmail\",\r\n        \"op\": \"replace\",\r\n        \"value\":\"helloworld@gmail.com\"\r\n    }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5000/api/orders/3",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"orders",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete single order",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJ2dW5ndXllbiIsIm5iZiI6MTY0ODAyNDcyNCwiZXhwIjoxNjQ4NjI5NTI0LCJpYXQiOjE2NDgwMjQ3MjR9.p5u296M54F_g74krUrdlc_QYhFKdMWbbTggwoT3VBFx2He5v0cQfHQIMYtKMhHoYJblUdixK81velBIPAmtd2w",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:5000/api/orders/3",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"orders",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
