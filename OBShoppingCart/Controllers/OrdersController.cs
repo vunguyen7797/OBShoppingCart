@@ -30,7 +30,7 @@ namespace OBShoppingCart.Controllers
         /// </summary>
         /// <param name="orderCreateDto">Order payload</param>
         /// <returns></returns>
-        [HttpPost]
+        [HttpPost("create")]
         [AllowAnonymous]
         public async Task<ActionResult> CreateOrder(OrderCreateDto orderCreateDto)
         {
